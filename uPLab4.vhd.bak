@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Lab4 is
+		port(
+			PH0 : in std_logic;
+			PH1 : in std_logic;
+			PK7 : in std_logic;
+			PK6 : in std_logic;
+			PH6 : in std_logic;
+			TRI_IN : in std_logic;
+			Flip_IN : in std_logic;
+		);
+end Lab4;
+
+architecture arch of Lab4 is
+begin
+	Flip_IN <= (not PH0) and (not PK7) and (not PK6) and (not PH6);
+	TRI_IN <= (not PH1) and (not PK7) and (not PK6) and (not PH6);
+	
+	
+end architecture 
